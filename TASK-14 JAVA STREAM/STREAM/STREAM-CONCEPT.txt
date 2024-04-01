@@ -1,0 +1,27 @@
+ByteArrayInputStream:
+
+-it can be used to read byte array as input stream.
+-Java ByteArrayInputStream class contains an internal
+buffer which is used to read byte array as stream. 
+In this stream, the data is read from a byte array.
+
+ByteArrayOutputStream:
+
+-The ByteArrayOutputStream holds a copy of data and forwards it to multiple streams.
+-The default size of the buffer is 32 bytes and automatically increases as data is written into it.
+-Closing this stream after use has no effect as its methods can be called even after closing it without producing any IOException.
+
+
+DataInputStream:
+
+-DataInputStream used to read primitive data types from an input source.
+Commonly used methods of DataInputStream-readBooolean(),readByte(),readShort(),readInt()
+
+
+DataOutputStream:
+
+-Java DataOutputStream class allows an application to write primitive Java data types
+to the output stream in a machine-independent way.
+
+-Java application generally uses the data output stream to write data that can later 
+be read by a data input stream.

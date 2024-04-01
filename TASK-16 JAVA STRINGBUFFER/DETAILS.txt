@@ -1,0 +1,15 @@
+BufferedInputStream:
+
+-The BufferedInputStream class reads data from a stream and uses an internal buffer to store the bytes of data to be read or skipped. 
+-This internal buffer array is created along with the BufferedInputStream. The size of the internal buffer is approximately 8192 bytes.
+
+BufferedOutputStream
+-This class implements a buffered output stream that can be used to write bytes to the underlying output stream without making unnecessary 
+calls to the underlying system for each byte. Like BufferedInputStream, it also maintains an internal buffer of 8192 bytes.
+
+
+InputStream − This is used to read (sequential) data from a source.
+-This class reads the data from a specific file (byte by byte). It is usually used to read the contents of a file with raw bytes
+
+OutputStream − This is used to write data to a destination.
+-This writes data into a specific file or, file descriptor (byte by byte). It is usually used to write the contents of a file with raw bytes

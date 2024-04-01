@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact"
+        >Contact</a>
+        <a href="#about">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    
+    </div>
+ <div class="middle">
+    <p class="mid"> welcome</p>
+ </div>
+    <div class="footer">
+        <div class="heading">
+            <h2>Company</h2>
+        </div>
+        <div class="content">
+            <div class="Service">
+                <h4>Service</h4>
+                <p><a href="#">App Development</a></p>
+                <p><a href="#">Web Development</a></p>
+                <p><a href="#">Devops</a></p>
+                <p><a href="#">Web Desinging</a></p>
+            </div>
+            <div class="social">
+                <h4>Social</h4>
+                <p><a href="#">linkedin</a></p>
+                <p><a href="#">Twitter</a></p>
+                <p><a href="#">Github</a></p>
+                <p><a href="#">Codepen</a></p>
+            </div>
+            <div class="ouicklink">
+                <h4>Quick Links</h4>
+                <p><a href="#">Home</a></p>
+                <p><a href="#">About</a></p>
+                <p><a href="#">blogs</a></p>
+                <p><a href="#">Contact</a></p>
+            </div>
+        </div>
+        <footer>
+            @ 2024 Batch
+        </footer>
+
+
+    </div>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+</body>
+</html>

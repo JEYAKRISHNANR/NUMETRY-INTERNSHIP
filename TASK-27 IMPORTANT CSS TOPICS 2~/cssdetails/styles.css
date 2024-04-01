@@ -1,0 +1,113 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Elements selectors */
+h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Combinatorial selectors */
+h1 + p {
+    font-style: italic;
+}
+
+/* Pseudo-selectors */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Specificity */
+.specificity-example p {
+    color: green !important;
+}
+
+/* Inheritance */
+.inheritance-example {
+    color: #333;
+}
+
+/* Box model */
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Fonts & Typography */
+.font-example {
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Colors */
+.color-example {
+    color: #ff0000;
+    background-color: #ffff00;
+}
+
+/* Positioning */
+.position-example {
+    position: relative;
+    left: 50px;
+    top: 50px;
+}
+
+/* Units (Absolute Relative) */
+.unit-example {
+    width: 50%;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+/* Overflow */
+.overflow-example {
+    width: 200px;
+    height: 100px;
+    overflow: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Float */
+.float-example {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    margin-right: 20px;
+}
+
+/* Display & Flex */
+.display-example {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.display-example div {
+    width: 100px;
+    height: 100px;
+    background-color: #28a745;
+    margin: 0 5px;
+}

@@ -1,0 +1,99 @@
+1.package jdbc1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class jdbc1 {
+	public static void main(String[] args) throws SQLException {
+		
+		System.out.println("hii");
+		Connection con = null;
+		try
+		{
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","Suresh@2104");
+			System.out.println("Connected");
+			 Statement st = con.createStatement();
+			 
+
+	            ResultSet rs = st.executeQuery("SELECT * FROM jdbc"); // Execute SELECT query
+
+	            // Print data from ResultSet
+	            while (rs.next()) {
+	                String name = rs.getString("name");
+	                int rollNo = rs.getInt("rollno");
+	                String department = rs.getString("department");
+	                System.out.println("Name: " + name + ", Roll No: " + rollNo + ", Department: " + department);
+	          
+		  }
+		}
+		catch(Exception e){
+			System.out.println("Error in db connection");
+			System.out.println(e);
+		}
+//		Statement st = con.createStatement();
+//		ResultSet rs= st.executeQuery("select * from jdbc");// Execute query
+//		rs.next();
+//       
+//	String name= rs.getString("name"); // Retrieve name from db
+//
+//	System.out.println(name); // Print result on console
+//		st.close(); // close statement
+//		con.close(); // close connection
+		System.out.println("Connection Closed....");
+	}
+
+}
+____________________________________________________________________________________________________________________________________
+2.package jdbc1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class jdbc1 {
+	public static void main(String[] args) throws SQLException {
+		
+		System.out.println("hii");
+		Connection con = null;
+		try
+		{
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","Suresh@2104");
+			System.out.println("Connected");
+			 Statement st = con.createStatement();
+//			 st.executeUpdate("INSERT INTO jdbc(name, rollno, department) VALUES ('JADEJA', 106, 'BOWLER')");
+//	         st.executeUpdate("INSERT INTO jdbc(name, rollno, department) VALUES ('ASWIN', 107, 'BOWLER')");
+//	         st.executeUpdate("INSERT INTO jdbc(name, rollno, department) VALUES ('BUMRAH', 108, 'BOWLER')");
+	       
+             ResultSet rs = st.executeQuery("SELECT * FROM jdbc"); // Execute SELECT query
+	            while (rs.next()) {
+	                String name = rs.getString("name");
+	                int rollNo = rs.getInt("rollno");
+	                String department = rs.getString("department");
+	                System.out.println("Name: " + name + ", Roll No: " + rollNo + ", Department: " + department);
+	          
+		  }
+		}
+		catch(Exception e){
+			System.out.println("Error in db connection");
+			System.out.println(e);
+		}
+//		Statement st = con.createStatement();
+//		ResultSet rs= st.executeQuery("select * from jdbc");// Execute query
+//		rs.next();
+//       
+//	String name= rs.getString("name"); // Retrieve name from db
+//
+//	System.out.println(name); // Print result on console
+//		st.close(); // close statement
+//		con.close(); // close connection
+		System.out.println("Connection Closed....");
+	}
+
+}

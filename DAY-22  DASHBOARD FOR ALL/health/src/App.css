@@ -1,0 +1,49 @@
+.navbar {
+  background-color: #3f51b5; /* Dark blue */
+}
+.navbar-collapse {
+  justify-content: center; /* Align navbar content to the center */
+}
+
+.navbar-nav {
+  text-align: center; /* Align nav items to the center */
+}
+
+.navbar-toggler {
+  margin-left: auto; /* Move the toggler button to the right */
+}
+.navbar-brand {
+  color: #fff; /* White */
+  font-size: 1.5rem; /* Larger font size */
+  font-weight: bold; /* Bold text */
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #fff; /* White */
+  font-weight: bold; /* Bold text */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #ffd700; /* Gold */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* White */
+}
+
+.form-control {
+  border-color: #fff; /* White */
+  color: #fff; /* White */
+  background-color: transparent; /* Transparent background */
+}
+
+.btn-outline-success {
+  color: #fff; /* White */
+  border-color: #fff; /* White */
+}
+
+.btn-outline-success:hover {
+  color: #3f51b5; /* Dark blue */
+  background-color: #ffd700; /* Gold */
+}

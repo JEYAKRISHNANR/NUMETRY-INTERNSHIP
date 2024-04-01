@@ -1,0 +1,32 @@
+SET:
+
+The Set is a non-indexed sequence.
+The set doesn’t allow duplicate elements.
+Position access to elements is not allowed.
+Null elements can store only once.
+
+HashSet:
+
+HashSet implements the Set interface 
+No Duplicates are allowed.
+Dummy values are allowed in HashSet.
+HashSet is not Synchronized .
+
+TreeSet:
+Maintains ascending order.
+Duplicate elements are not allowed.
+In TreeSet all the elements remain in the sorted order.
+Easy to find Smallest and largest value.
+
+LinkedHashSet:
+Maintains the insertion order.
+It allows null element.
+It is non-synchronized.
+High memory as it maintains the insertion order.
+Slower than HashSet if elements are more.
+
+NavigableSet:
+
+It is an interface that extends SortedSet.
+It provides navigation methods like lower, floor, ceiling, higher etc.
+It inherits the complexity of SortedSet.

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>Crud Operation</title>
+    <link type="text/css" rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form autocomplete="on"  id="storeForm">
+                    <div>
+                        <label for="ID">Student Id</label>
+                        <input type="text" name="id" id="ID" placeholder="Enter your ID">
+                    </div>
+                    <div>
+                        <label for="NAME">Student Name</label>
+                        <input type="text" name="name" id="NAME"  placeholder="Enter your Name">
+                    </div>
+                    <div>
+                        <label for="ADD">Address </label><br>
+                        <input type="text" name="add" id="ADD"  placeholder="Enter your Address">
+                    </div>
+                    <div>
+                        <label for="PHOTO">Photo</label>
+                        <input type="file" name="photo" id="PHOTO" accept="image/*"  placeholder="Enter your photo">
+                    </div>
+
+                    <div class="form_action--button">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+            </td>
+        </tr>
+            <tr>
+                <td>
+                    <table class="list" id="storeList">
+                        <thead>
+                            <tr>
+                                <th>Student Id</th>
+                                <th>Student Name</th>
+                                <th>Address </th>
+                                <th>Photo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+               
+            </td>
+        </tr>
+        
+    </table>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form action="" method="post" id="registrationForm">
+        <div class="imgcontainer">
+            <img src="login2.jpeg" alt="Avatar" class="avatar">
+          </div>
+    <div class="login">
+        
+            <label for="uname"><B>UserName</B></label>
+        <input type="text" placeholder="UserName" name="uname" required id="name"><br>
+       <label for="psw"><b>Password</b></label> <input type="text" placeholder="Password" id="password"><br>
+       <label for="psw"><b>Email</b></label> <input type="text" placeholder="Email" id="email"><br>
+       <label for="psw"><b>Contact</b></label> <input type="text" placeholder="Contact number" id="contact"><br>
+        <button type="submit" >Submit</button>
+        <label>
+            <input type="checkbox" checked="checked" name="remember">Remember me 
+        </label>
+    </div>
+    <div class="login" style="background-color: #f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+<span class="psw">Forgot <a href="#">Password?</a></span></div>
+        </form>
+    <script type="text/javascript">
+ document.getElementById("registrationForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form submission
+  
+  // Get form values
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var role = document.getElementById("password").value;
+  var skid = document.getElementById("contact").value;
+
+  // Regular expression for email validation
+  var emailRegex = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+  
+  // Perform validation
+  if (name.trim() === "" || email.trim() === "" || role.trim() === "" || skid.trim() === "") {
+    alert("All fields are required");
+  } else if (!emailRegex.test(email)) {
+    alert("Invalid email address");
+  } else {
+    alert("Registration successful!");
+    // You can submit the form or redirect to another page here
+  }
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+REST API
+
+   1.it is a collections of URLs, which is available on the server
+   2.Each URL is call it as REST endpoint.
+   3.Each REST endpoint performs a certain operation.
+   4.Each REST endpoint also contains a HTTP method. 
+
+Hypertext Transfer Protocol (HTTP) :-
+
+   1.foundation of the World Wide Web, and is used to load webpages using hypertext links.
+   2.Mostly used in enterprise application it is servlet used to go from one page to another.
+   3.it has mainly two methods GET and POST both has its own advantages one will show data in url 
+   and one will not show data in url. 
+
+HTTP METHODS 
+
+   1.GET- Fetch the data from the server
+   2.POST- Create a data in the Server
+   3.PUT-Update a data in the server
+   4.DELETE- Delete a data from the server
+
+For HTTP POST AND PUT methods, we pass the data in Request Body.
+
+DATA FORMAT:
+
+   1.We will use json data format to communicate with REST API
+   2.JSON is the most widely used dataformat
+   3.We send the json data in Request Body and it will return the json response
+
+
+JSON:
+   JSON-Javascript Object Notation.
+   1.it contains key and value pairs
+   2.The key will always be in String but value could be anything
+   3.String ,Number ,Boolean and Object etc.
+   example:
+    {
+     "name":"john",
+     "age":31,
+     "city":"New York"
+    }
+
+
+BASE URL:
+
+ 1.URI design in RESTful APIs involves creating resource identifiers
+  that are intuitive, hierarchical, and consistent. Here's an
+  example of URI design in a Spring Boot RESTful API:
+
+
+-Learn the basics of setting up projects, configuring routes/endpoints, 
+ and handling requests and responses.
+
+-Practice handling different types of requests, validating inputs, 
+ and returning appropriate responses.

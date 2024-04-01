@@ -1,0 +1,35 @@
+.custom_nav-container {
+  background-color: #ffffff; /* Navbar background color */
+}
+
+.navbar-brand img {
+  max-width: 100px; /* Adjust the maximum width of the logo */
+}
+
+.navbar-nav .nav-link {
+  color: #333333; /* Navbar links color */
+  margin-right: 20px; /* Spacing between navbar links */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff; /* Navbar links hover color */
+}
+
+.quote_btn-container a {
+  color: #333333; /* Login and Sign Up button text color */
+  margin-right: 10px; /* Spacing between login and sign up buttons */
+}
+
+.quote_btn-container a:hover {
+  color: #007bff; /* Login and Sign Up button text hover color */
+}
+
+.nav_search-btn {
+  background-color: #007bff; /* Search button background color */
+  color: #ffffff; /* Search button text color */
+  margin-left: 10px; /* Spacing between search button and other elements */
+}
+
+.nav_search-btn:hover {
+  background-color: #0056b3; /* Search button hover background color */
+}

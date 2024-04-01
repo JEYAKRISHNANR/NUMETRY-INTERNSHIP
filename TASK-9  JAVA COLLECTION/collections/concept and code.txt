@@ -1,0 +1,184 @@
+Vector in Java:
+
+
+*Like ArrayList, Vector also implements the List interface and allows random access to elements via an index.
+*It is less efficient than ArrayList due to the synchronization overhead.
+*It's mostly used in scenarios where thread safety is required.
+
+
+package List;
+
+import java.util.Vector;
+
+public class vector {
+    public static void main(String[] args) {
+        Vector<Integer> vector = new Vector<>();
+        vector.add(10);
+        vector.add(20);
+        vector.add(30);
+        System.out.println("Element at index 0: " + vector.get(0));
+        System.out.println("Elements in the vector:");
+        for (int i = 0; i < vector.size(); i++) {
+            System.out.println(vector.get(i));
+        }
+        vector.remove(1); 
+        System.out.println("Elements in the vector after removal:");
+        for (Integer num : vector) {
+            System.out.println(num);
+        }
+        int searchElement = 10;
+        if (vector.contains(searchElement)) {
+            System.out.println("Vector contains " + searchElement);
+        } else {
+            System.out.println("Vector does not contain " + searchElement);
+        }
+        vector.clear();
+        if (vector.isEmpty()) {
+            System.out.println("Vector is empty");
+        } else {
+            System.out.println("Vector is not empty");
+        }
+
+         Vector<String> vector1 = new Vector<>();
+         vector1.add("Apple");
+         vector1.add("Banana");
+         vector1.add("Orange");
+         System.out.println("First element: " + vector1.get(0));
+         for (String fruit : vector1) {
+           System.out.println(fruit);
+          }
+       
+
+    }
+}
+______________________________________________________________________________
+ARRAYLIST:
+
+*ArrayList is similar to an array but with dynamic resizing capabilities. It automatically grows and shrinks in size as elements are added or removed.
+*It allows random access to elements via an index, and it maintains the insertion order of elements.
+*ArrayList can store elements of any type (objects), including primitive types if they are used with wrapper classes like Integer, Double, etc.
+
+package List;
+
+import java.util.ArrayList;
+
+public class Arraylist {
+	  public static void main(String[] args) {
+	        ArrayList<String> arrayList = new ArrayList<>();
+	        arrayList.add("Apple");
+	        arrayList.add("Banana");
+	        arrayList.add("Orange");
+	        System.out.println("Element at index 0: " + arrayList.get(0));
+	        System.out.println("Elements in the ArrayList:");
+	        for (int i = 0; i < arrayList.size(); i++) {
+	            System.out.println(arrayList.get(i));
+	        }
+	        arrayList.remove(1); 
+	        System.out.println("Elements in the ArrayList after removal:");
+	        for (String fruit : arrayList) {
+	            System.out.println(fruit);
+	        }
+	        String searchElement = "Apple";
+	        if (arrayList.contains(searchElement)) {
+	            System.out.println("ArrayList contains " + searchElement);
+	        } else {
+	            System.out.println("ArrayList does not contain " + searchElement);
+	        }
+	        arrayList.clear();
+	        if (arrayList.isEmpty()) {
+	            System.out.println("ArrayList is empty");
+	        } else {
+	            System.out.println("ArrayList is not empty");
+	        }
+	  }
+
+}
+____________________________________________________________________________________
+
+linkedlist
+
+*LinkedList is a linear data structure where elements are stored in a sequence and each element is connected to its previous and next element.
+*It allows for dynamic addition and removal of elements at any position in the list.
+*It does not provide random access to elements based on index; instead, it requires traversing the list from the beginning or end to access elements.
+*LinkedList is efficient for adding or removing elements at the beginning or middle of the list, but it can be less efficient for random access and traversal compared to ArrayList.
+
+package List;
+import java.util.LinkedList;
+
+public class linkedlist{
+    public static void main(String[] args) {
+        // Creating an empty LinkedList
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.add(10);
+        linkedList.add(20);
+        linkedList.add(30);
+        System.out.println("LinkedList after adding elements at the end: " + linkedList);
+        linkedList.addFirst(5);
+        linkedList.addFirst(2);
+        System.out.println("LinkedList after adding elements at the front: " + linkedList);
+        int firstElement = linkedList.getFirst();
+        int lastElement = linkedList.getLast();
+        System.out.println("First element: " + firstElement);
+        System.out.println("Last element: " + lastElement);
+        linkedList.removeFirst();
+        linkedList.removeLast();
+        System.out.println("LinkedList after removing first and last elements: " + linkedList);
+        linkedList.add(1, 15);
+        System.out.println("LinkedList after adding element at index 1: " + linkedList);
+        linkedList.remove(2);
+        System.out.println("LinkedList after removing element at index 2: " + linkedList);
+        int searchElement = 15;
+        if (linkedList.contains(searchElement)) {
+            System.out.println("LinkedList contains " + searchElement);
+        } else {
+            System.out.println("LinkedList does not contain " + searchElement);
+        }
+        linkedList.clear();
+        if (linkedList.isEmpty()) {
+            System.out.println("LinkedList is empty");
+        } else {
+            System.out.println("LinkedList is not empty");
+        }
+    }
+}
+____________________________________________________________________________________________________________
+Stack 
+
+*LIFO Principle: The Last In, First Out principle dictates that the last element added to the stack is the first one to be removed.
+*OPERATION- PUSH,POP,PEEK,ISEMPTY,SIZE.
+*Stacks can be implemented using arrays, linked lists, or other data structures.
+package List;
+import java.util.EmptyStackException;
+import java.util.Stack;
+
+public class stack {
+    public static void main(String[] args) {
+        Stack<Integer> stack = new Stack<>();
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        System.out.println("Stack: " + stack);
+        int topElement = stack.peek();
+        System.out.println("Top element: " + topElement);
+        int poppedElement = stack.pop();
+        System.out.println("Popped element: " + poppedElement);
+        System.out.println("Stack after popping: " + stack);
+        boolean isEmpty = stack.isEmpty();
+        System.out.println("Is stack empty? " + isEmpty);
+        int searchElement = 20;
+        int position = stack.search(searchElement);
+        if (position != -1) {
+            System.out.println("Element " + searchElement + " found at position " + position);
+        } else {
+            System.out.println("Element " + searchElement + " not found in the stack");
+        }
+        stack.clear();
+        isEmpty = stack.isEmpty();
+        System.out.println("Is stack empty after clearing? " + isEmpty);
+        try {
+            stack.pop();
+        } catch (EmptyStackException e) {
+            System.out.println("Cannot pop from an empty stack: " + e.getMessage());
+        }
+    }
+}

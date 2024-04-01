@@ -1,0 +1,171 @@
+HashSet
+
+
+package set;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class hashset {
+	public static void main(String[] args) {
+		int a[]= {10,20,30,10,40};
+		Set<Integer> set=new HashSet<>();
+		for(int i=0;i<a.length;i++) {
+			set.add(a[i]);
+		}
+		System.out.println("Array value with duplicate ");
+		for(int i=0;i<a.length;i++) {
+			System.out.print(a[i]+" ");
+		}
+		System.out.println();
+		System.out.println("set value without duplicate "+ set)
+		;
+		Set<String> hashSet = new HashSet<>();
+
+        // Adding elements
+        hashSet.add("Apple");
+        hashSet.add("Banana");
+        hashSet.add("Orange");
+
+        // Removing elements
+        hashSet.remove("Banana");
+
+        // Checking membership
+        System.out.println("Contains Apple: " + hashSet.contains("Apple"));
+
+        // Iterating through the set
+        System.out.print("HashSet elements: ");
+        for (String element : hashSet) {
+            System.out.print(element + " ");
+        }
+        System.out.println();
+	}
+
+}
+____________________________________________________________________________________________________
+
+LinkedHashSet
+
+package set;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class Linkedhashset {
+    public static void main(String[] args) {
+    	int a[]= {10,40,30,50,20,10};
+    	Set<Integer> linkedhash=new LinkedHashSet<>();// its follow declaration order
+    	System.out.println("Array value before linkedhashset");
+    	for(int i=0;i<a.length;i++) {
+    		System.out.print(a[i]+" ");
+    		linkedhash.add(a[i]);
+    	}
+    	System.out.println();
+    	System.out.println("linkedHashSet value "+linkedhash);
+    	
+        Set<String> linkedHashSet = new LinkedHashSet<>();
+
+        // Adding elements
+        linkedHashSet.add("Apple");
+        linkedHashSet.add("Banana");
+        linkedHashSet.add("Orange");
+
+        // Removing elements
+        linkedHashSet.remove("Banana");
+
+        // Checking membership
+        System.out.println("Contains Orange: " + linkedHashSet.contains("Orange"));
+
+        // Iterating through the set
+        System.out.print("LinkedHashSet elements: ");
+        for (String element : linkedHashSet) {
+            System.out.print(element + " ");
+        }
+        System.out.println();
+    }
+}
+______________________________________________________________________________________________
+
+treeset and sortedset
+
+package set;
+
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public class treeset {
+	public static void main(String[] args) {
+		int a[]= {30,10,70,60,20,40,10};
+		System.out.println("Array element in random order and include duplicate value");
+		for(int i=0;i<a.length;i++) {
+			System.out.print(a[i]+" ");
+		}
+		System.out.println();
+		Set<Integer> orderset=new TreeSet<>();
+		for(int i=0;i<a.length;i++) {
+			orderset.add(a[i]);
+		}
+		System.out.println("Treeset make element as ascending order and remove the duplicate value");
+		System.out.println(orderset);
+		SortedSet<Integer> sortedSet = new TreeSet<>();
+        // Adding elements
+        sortedSet.add(3);
+        sortedSet.add(1);
+        sortedSet.add(2);
+        // Removing elements
+        sortedSet.remove(2);
+        // Checking membership
+        System.out.println("Contains 1: " + sortedSet.contains(1));
+        // Iterating through the set
+        System.out.print("SortedSet elements: ");
+        for (Integer element : sortedSet) {
+            System.out.print(element + " ");
+        }
+        System.out.println();
+	}
+
+}
+________________________________________________________________________________________________________________
+navigableset
+
+
+package set;
+
+import java.util.NavigableSet;
+import java.util.TreeSet;
+
+public class navigableset {
+	public static void main(String[] args) {
+		  NavigableSet<Integer> navigableSet = new TreeSet<>();
+
+	        // Adding elements
+	        navigableSet.add(3);
+	        navigableSet.add(1);
+	        navigableSet.add(5);
+	        navigableSet.add(2);
+	        navigableSet.add(4);
+
+	        // Printing the set
+	        System.out.println("NavigableSet elements: " + navigableSet);
+
+	        // Removing an element
+	        navigableSet.remove(2);
+
+	        // Checking if an element exists
+	        System.out.println("Contains 4: " + navigableSet.contains(4));
+
+	        // Iterating through the set
+	        System.out.print("NavigableSet elements after removing 2: ");
+	        for (Integer element : navigableSet) {
+	            System.out.print(element + " ");
+	        }
+	        System.out.println();
+
+	        // Finding the closest element to a value
+	        System.out.println("Ceiling of 3: " + navigableSet.ceiling(3));
+	        System.out.println("Floor of 3: " + navigableSet.floor(3));
+	}
+
+}
+
+

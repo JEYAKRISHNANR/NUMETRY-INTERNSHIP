@@ -1,0 +1,319 @@
+QUEUE:
+
+package queue;
+
+public class Queue {
+	private static int front, rear, capacity; 
+    private static int queue[]; 
+   
+    Queue(int size) { 
+        front = rear = 0; 
+        capacity = size; 
+        queue = new int[capacity]; 
+    } 
+   
+    // insert an element into the queue
+    static void queueEnqueue(int item)  { 
+        // check if the queue is full
+        if (capacity == rear) { 
+            System.out.printf("\nQueue is full\n"); 
+            return; 
+        } 
+   
+        // insert element at the rear 
+        else { 
+            queue[rear] = item; 
+            rear++; 
+        } 
+        return; 
+    } 
+   
+    //remove an element from the queue
+    static void queueDequeue()  { 
+        // check if queue is empty 
+        if (front == rear) { 
+            System.out.printf("\nQueue is empty\n"); 
+            return; 
+        } 
+   
+        // shift elements to the right by one place uptil rear 
+        else { 
+            for (int i = 0; i < rear - 1; i++) { 
+                queue[i] = queue[i + 1]; 
+            } 
+   
+       
+      // set queue[rear] to 0
+            if (rear < capacity) 
+                queue[rear] = 0; 
+   
+            // decrement rear 
+            rear--; 
+        } 
+        return; 
+    } 
+   
+    // print queue elements 
+    static void queueDisplay() 
+    { 
+        int i; 
+        if (front == rear) { 
+            System.out.printf("Queue is Empty\n"); 
+            return; 
+        } 
+   
+        // traverse front to rear and print elements 
+        for (i = front; i < rear; i++) { 
+            System.out.printf(" %d = ", queue[i]); 
+        } 
+        return; 
+    } 
+   
+    // print front of queue 
+    static void queueFront() 
+    { 
+        if (front == rear) { 
+            System.out.printf("Queue is Empty\n"); 
+            return; 
+        } 
+        System.out.printf("\nFront Element of the queue: %d", queue[front]); 
+        return; 
+    } 
+    
+    public static void main(String[] args) {
+    	  // Create a queue of capacity 4 
+        Queue q = new Queue(4); 
+   
+        System.out.println("Initial Queue:");
+       // print Queue elements 
+        q.queueDisplay(); 
+   
+        // inserting elements in the queue 
+        q.queueEnqueue(10); 
+        q.queueEnqueue(30); 
+        q.queueEnqueue(50); 
+        q.queueEnqueue(70); 
+   
+        // print Queue elements 
+        System.out.println("Queue after Enqueue Operation:");
+        q.queueDisplay(); 
+   
+        // print front of the queue 
+        q.queueFront(); 
+         
+        // insert element in the queue 
+        q.queueEnqueue(90); 
+   
+        // print Queue elements 
+        q.queueDisplay(); 
+   
+        q.queueDequeue(); 
+        q.queueDequeue(); 
+        System.out.printf("\nQueue after two dequeue operations:"); 
+   
+        // print Queue elements 
+        q.queueDisplay(); 
+   
+        // print front of the queue 
+        q.queueFront(); 
+    } 
+}
+
+
+_________________________________________________________________________________________
+dEQUEUE:
+
+package queue;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.Iterator;
+
+public class dequeue {
+	public static void main(String[] args) {
+		 Deque<String> dq = new ArrayDeque<String>();
+
+     // add() method to insert
+     dq.add("hi");
+     dq.addFirst("hello");
+     dq.add("good morning");
+     dq.add("have a nice day");
+
+     for (Iterator itr = dq.iterator();
+         itr.hasNext();) {
+         System.out.print(itr.next() + " ");
+     }
+
+     System.out.println();
+
+     for (Iterator itr = dq.descendingIterator();
+         itr.hasNext();) {
+         System.out.print(itr.next() + " ");
+     }
+     
+     Deque<String> dq1 = new ArrayDeque<String>();
+
+ // add() method to insert
+ dq1.add("One");
+ dq1.addFirst("Two");
+ dq1.addLast("Three");
+
+ System.out.println(dq1);
+
+ System.out.println(dq1.pop());
+
+ System.out.println(dq1.poll());
+
+ System.out.println(dq1.pollFirst());
+
+ System.out.println(dq1.pollLast());
+	}
+
+}
+_____________________________________________________________________________________________
+
+Arraydequeue:
+
+package queue;
+
+import java.util.ArrayDeque;
+import java.util.Iterator;
+
+public class Arraydequeue {
+	
+	public static void main(String[] args) {
+		ArrayDeque<String> numbers= new ArrayDeque<>();
+        numbers.add("One");
+        numbers.add("Two");
+        numbers.add("Three");
+
+        System.out.print("ArrayDeque: ");
+
+        // Using iterator()
+        Iterator<String> iterate = numbers.iterator();
+        while(iterate.hasNext()) {
+            System.out.print(iterate.next());
+            System.out.print(", ");
+        }
+
+        System.out.print("\nArrayDeque in reverse order: ");
+        // Using descendingIterator()
+        Iterator<String> desIterate = numbers.descendingIterator();
+        while(desIterate.hasNext()) {
+            System.out.print(desIterate.next());
+            System.out.print(", ");
+        }
+	}
+
+}
+__________________________________________________________________________________________
+
+PrimaryQueue:
+
+package queue;
+import java.util.LinkedList;
+
+public class PrimaryQueue1<T> {
+    private LinkedList<T> queue;
+
+    public PrimaryQueue1() {
+        queue = new LinkedList<>();
+    }
+
+    // Add an element to the queue
+    public void enqueue(T item) {
+        queue.addLast(item);
+    }
+
+    // Remove and return the element at the front of the queue
+    public T dequeue() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Queue is empty");
+        }
+        return queue.removeFirst();
+    }
+
+    // Get the element at the front of the queue without removing it
+    public T peek() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Queue is empty");
+        }
+        return queue.getFirst();
+    }
+
+    // Check if the queue is empty
+    public boolean isEmpty() {
+        return queue.isEmpty();
+    }
+
+    // Get the size of the queue
+    public int size() {
+        return queue.size();
+    }
+
+    // Display the elements of the queue
+    public void display() {
+        for (T item : queue) {
+            System.out.print(item + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        PrimaryQueue1<Integer> primaryQueue = new PrimaryQueue1<>();
+
+        // Enqueue elements
+        primaryQueue.enqueue(10);
+        primaryQueue.enqueue(20);
+        primaryQueue.enqueue(30);
+
+        // Display the elements
+        System.out.println("Queue elements:");
+        primaryQueue.display();
+
+        // Dequeue an element
+        System.out.println("Dequeued element: " + primaryQueue.dequeue());
+
+        // Display the elements after dequeue
+        System.out.println("Queue elements after dequeue:");
+        primaryQueue.display();
+
+        // Peek the front element
+        System.out.println("Front element: " + primaryQueue.peek());
+
+        // Check if the queue is empty
+        System.out.println("Is the queue empty? " + primaryQueue.isEmpty());
+
+        // Get the size of the queue
+        System.out.println("Size of the queue: " + primaryQueue.size());
+    }
+}
+__________________________________________________________________________________________________________________________
+
+package queue;
+
+import java.util.PriorityQueue;
+
+public class primaryqueue {
+	public static void main(String[] args) {
+		
+	
+	 PriorityQueue<Integer> pq = new PriorityQueue<>();
+     for(int i=0;i<6;i++){
+         pq.add(i);
+         
+     }
+     System.out.println(pq);
+     System.out.println("Priority queue: " + pq);
+     System.out.println("Peek: " + pq.peek());
+     pq.poll();
+     System.out.println("Priority queue after removing top element: " + pq);
+     System.out.println("Does the queue contain 3? " + pq.contains(3));
+     System.out.println("Size of queue: " + pq.size());
+     pq.clear();
+     System.out.println("Is the queue empty? " + pq.isEmpty());
+ }
+
+}
+
+_____________________________________________________________________________________________________________
